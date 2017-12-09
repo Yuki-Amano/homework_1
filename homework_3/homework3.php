@@ -1,4 +1,5 @@
 <?php
+echo "<h2> Реальные звери: </h2>";
 $animals = array(
     "South America"=>
     array(
@@ -31,9 +32,12 @@ foreach ($animals as $continents => $zveri)
     echo implode(", ", $zveri) . "<br>";
 };
 
+echo "<br><h2> Звери, в названиях которых только два слова: </h2>";
+
 $x = array();
 $y = array();
 $z = array();
+
 
 foreach ($animals as $continents) 
 {
@@ -42,6 +46,8 @@ foreach ($animals as $continents)
         if (substr_count($zveri, " ") === 1)
         {
             list($x[], $y[]) = explode(" ", $zveri);
+            echo $zveri;
+            echo "<br>";
         }
     }
 }
@@ -51,10 +57,8 @@ foreach (array_keys($x) as $i) {
     $z[] = $x[$i].' '.$y[$i];
 }
 
-echo "<br><h2> Фантазийные существа: </h2>";
-foreach($z as $value)
-{
-echo "$value <br>";
-}
+$string = implode(", ", $z); 
 
+echo "<br><h2> Фантазийные существа: </h2>";
+echo $string;
 ?>

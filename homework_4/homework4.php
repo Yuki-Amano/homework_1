@@ -1,7 +1,7 @@
 <?php
 
 $cache_file = 'cache.txt';
-$cache_time = 60; 
+$cache_time = 3600; 
 
 $city_id=569696;
 

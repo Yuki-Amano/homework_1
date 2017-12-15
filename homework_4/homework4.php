@@ -3,7 +3,7 @@
 $cache_file = 'cache.txt';
 $cache_time = 3600; 
 
-$city_id=569696;
+$city_id = 569696;
 
 $url = "http://api.openweathermap.org/data/2.5/weather?id=$city_id&lang=en&units=metric&APPID=2e77775921c19b99e404f4084be3a1c3";
 
@@ -30,10 +30,10 @@ file_put_contents($cache_file, $contents);
 	<h1>Сегодня в солнечной Чувашии (Чебоксары) <?php echo date('d.m.o G:i') ?></h1>
 
 	<table>
-				<tr>
-					<td>Температура воздуха</td>
-					<td><?= $clima['main']['temp'] ?>°C</td>
-				</tr>        
+		<tr>
+		    <td>Температура воздуха</td>
+		    <td><?= $clima['main']['temp'] ?>°C</td>
+		</tr>        
                 <tr>
                     <td>Влажность</td>
                     <td><?= $clima['main']['humidity'] ?> %</td>

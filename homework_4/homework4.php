@@ -1,23 +1,18 @@
 <?php
-
 $cache_file = 'cache.txt';
 $cache_time = 3600; 
-
 $city_id = 569696;
-
-$url = "http://api.openweathermap.org/data/2.5/weather?id=$city_id&lang=en&units=metric&APPID=2e77775921c19b99e404f4084be3a1c3";
-
+$Api_key = '2e77775921c19b99e404f4084be3a1c3';
+$url = "http://api.openweathermap.org/data/2.5/weather?id=$city_id&lang=en&units=metric&appid=".$Api_key;
 if (file_exists($cache_file) &&(time() - $cache_time) < filemtime($cache_file)) {
     $contents = file_get_contents($cache_file);
-    $clima=json_decode($contents);
+    $clima=json_decode($contents, true);
 }
-
 else {
 $contents = file_get_contents($url);
 $clima=json_decode($contents, true);
 file_put_contents($cache_file, $contents);
 }
-
 ?>
 
 <!DOCTYPE html>

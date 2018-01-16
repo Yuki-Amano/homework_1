@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['check'])) {
 $score = array_sum($_POST);
-$text= 'Ïîçäðàâëÿåì, ' . $_POST["myName"].'! Âû çàðàáîòàëè '.$score.' áàëëîâ!';
+$text= 'ÐŸÐ¾Ð·Ð´Ñ€Ð°Ð²Ð»ÑÐµÐ¼, ' . $_POST["myName"].'! Ð’Ñ‹ Ð·Ð°Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ð»Ð¸ '.$score.' Ð±Ð°Ð»Ð»Ð¾Ð²!';
 
 $img = imagecreatefromjpeg('CertificateBackgrounds3.jpg');
 $x=55;

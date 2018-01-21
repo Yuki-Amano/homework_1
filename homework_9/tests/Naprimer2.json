@@ -1,0 +1,86 @@
+[
+  {
+    "question": "Первый вопрос",
+    "answers": [
+      {
+        "answer": "1 вариант",
+        "right": false
+      },
+      {
+        "answer": "2 вариант",
+        "right": false
+      },
+      {
+        "answer": "3 вариант",
+        "right": false
+      },
+      {
+        "answer": "4 вариант",
+        "right": true
+      }
+    ]
+  },
+  {
+    "question": "Второй вопрос",
+    "answers": [
+      {
+        "answer": "1 вариант",
+        "right": false
+      },
+      {
+        "answer": "2 вариант",
+        "right": false
+      },
+      {
+        "answer": "3 вариант",
+        "right": true
+      },
+      {
+        "answer": "4 вариант",
+        "right": false
+      }
+    ]
+  },
+  {
+    "question": "Третий вопрос",
+    "answers": [
+      {
+        "answer": "1 вариант",
+        "right": false
+      },
+      {
+        "answer": "2 вариант",
+        "right": true
+      },
+      {
+        "answer": "3 вариант",
+        "right": false
+      },
+      {
+        "answer": "4 вариант",
+        "right": false
+      }
+    ]
+  },
+  {
+    "question": "Четвертый вопрос",
+    "answers": [
+      {
+        "answer": "1 вариант",
+        "right": true
+      },
+      {
+        "answer": "2 вариант",
+        "right": false
+      },
+      {
+        "answer": "3 вариант",
+        "right": false
+      },
+      {
+        "answer": "4 вариант",
+        "right": false
+      }
+    ]
+  }
+]

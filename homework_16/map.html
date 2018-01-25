@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Карта</title>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <style>
+        #map {
+            width: 80%;
+            height: 80%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        const lat = getUrlVars()["lat"];
+        const long = getUrlVars()["long"];
+        ymaps.ready(init);
+        function init(){
+            myMap = new ymaps.Map ("map", {
+                center: [lat, long],
+                zoom: 14
+            });
+            myPlacemark = new ymaps.Placemark([lat, long], {
+                hintContent: `${lat}, ${long}`,
+                balloonContent: `${lat}, ${long}`
+            });
+            myMap.geoObjects.add(myPlacemark);
+        }
+        // Источник: https://ruseller.com/lessons.php?rub=29&id=1030
+        function getUrlVars() {
+            let vars = {};
+            window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, (m,key,value)=>vars[key] = value);
+            return vars;
+        }
+    </script>
+</body>
+</html>
